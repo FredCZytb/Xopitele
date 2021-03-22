@@ -10,8 +10,6 @@ public class Main {
         gui.setVisible(true);
         gui.setSize(1280,720);
         gui.getContentPane().setBackground(new Color(22, 156, 204));
-
-        ImageIcon image = new ImageIcon("logo.png");
-        gui.setIconImage(image.getImage());
+        gui.setIconImage(new ImageIcon("logo.png").getImage());
     }
 }
