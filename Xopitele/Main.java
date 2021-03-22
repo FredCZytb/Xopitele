@@ -1,5 +1,5 @@
 public class main {
-    public static void main(String[] args){
-        System.out.println("Running");
+    public static void Main(String[] args){
+        System.out.println("Xopitele Engine Initialized");
     }
 }
