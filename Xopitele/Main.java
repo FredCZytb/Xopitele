@@ -50,7 +50,7 @@ public class Main{
         gui.setVisible(true);
         gui.setSize(1280,720);
         gui.getContentPane().setBackground(new Color(22, 156, 204));
-        gui.setIconImage(new ImageIcon("C:\\Program Files\\XopiteleLogo.png").getImage());
+        gui.setIconImage(new ImageIcon(logoout).getImage());
         System.out.println("GUI system running");
     }
 }
