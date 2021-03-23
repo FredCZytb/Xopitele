@@ -57,11 +57,10 @@ public class Main{
         // Render gui
         JFrame gui = new JFrame("Xopitele - Running Application");
         JLabel bg = new JLabel(new ImageIcon("C:\\Program Files\\XopiteleBG.png"));
-        ImageIcon vwicon = new ImageIcon("C:\\Program Files\\XopiteleVitaminWorm.png");
-        JButton vitaminWormBTN = new JButton(vwicon);
+        JButton vitaminWormBTN = new JButton("Play Vitamin Worm");
 
         bg.setSize(1280,720);
-        vitaminWormBTN.setBounds(25,100,453,734);
+        vitaminWormBTN.setBounds(25,100,453,597);
 
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gui.add(vitaminWormBTN);
