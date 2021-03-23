@@ -38,6 +38,10 @@ public class Main implements ActionListener{
         clip.start();
         System.out.println("Audio system is poggers");
 
+        gui();
+    }
+
+    public void gui(){
         /*////*
         * GUI *
         */////*
