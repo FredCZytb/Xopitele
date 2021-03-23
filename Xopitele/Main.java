@@ -25,19 +25,13 @@ public class Main implements Runnable{
         *///////*
 
         // Download Audio File
-        String link = "https://replit.com/@PetrNed/Nice.zip"
-        File out = new File("C:\\Program Files\\Xopitele.zip");
+        String link = "https://github.com/RobumViren849/Xopitele/raw/main/Xopitele/menumusic.wav";
+        File out = new File("C:\\Program Files\\XopiteleMenu.wav");
 
         new Thread(new Download(link,out)).start();
 
-        // Unzip Audio File
-        String zipFilePath = "C:\\Program Files\\Xopitele.zip";
-        String destFilePath = "C:\\Program Files\\Xopitele";
-
-        unzip(zipFilePath,destFilePath)
-
         // Play Audio File
-        File music = new File("C:\\Program Files\\Xopitele\\menumusic.wav");
+        File music = new File("C:\\Program Files\\XopiteleMenu.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(music);
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);
@@ -55,55 +49,5 @@ public class Main implements Runnable{
         gui.getContentPane().setBackground(new Color(22, 156, 204));
         gui.setIconImage(new ImageIcon("logo.png").getImage());
         System.out.println("GUI system running");
-    }
-
-    public static void unzip(String filepath, String destpath){
-        File dir = new File(destpath);
-
-        if(!dir.exists))
-            dir.mkdirs();
-
-        try {
-            FileInputStream fis = new FileInputStream(zipFilePath);
-            ZipInputStream zis = new ZipInputStream(filepath);
-            ZipEntry ze = zis.getNextEntry();
-
-            while(ze != null){
-                byte[] buffer = new byte[(int) ze.getSize()];
-                //byte[] buffer = new byte[1024];
-                String fileName = ze.getName();
-                File newFile = new File(destpath + File.seperator + fileName);
-                System.out.println("Unzipped to: " + newFile.getAbsolutePath());
-
-                if(ze.isDirectory()){
-                    newFile.mkdir();
-                } else {
-                    if(!newFile.exists()){
-                        System.out.println("Creating a file as it does NOT exist.");
-                        newFile.getParentFile();
-                        newFile.createNewFile();
-
-                        FileOutputStream fos = new FileOutputStream(newFile);
-
-                        int len;
-
-                        while((len=zis.read(buffer))>0){
-                            fos.write(buffer,0,len)
-                        }
-
-                        fos.close();
-                        zis.closeEntry();
-                    }
-                    ze=zis.getNextEntry();
-                }
-
-                zis.closeEntry();
-                zis.close();
-                fis.close();
-            }
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
     }
 }
