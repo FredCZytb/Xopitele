@@ -27,9 +27,11 @@ public class Main{
         // Download Audio File
         String link = "https://github.com/RobumViren849/Xopitele/raw/main/Xopitele/menumusic.wav";
         File out = new File("C:\\Program Files\\XopiteleMenu.wav");
+        String logolink = "https://github.com/RobumViren849/Xopitele/raw/main/Xopitele/Image/logo.png";
+        File logoout = new File("C:\\Program Files\\XopiteleLogo.png");
 
         new Thread(new Download(link,out)).start();
-        new Thread(new Download("https://github.com/RobumViren849/Xopitele/raw/main/Xopitele/Image/logo.png","C:\\Program Files\\XopiteleLogo.png")).start();
+        new Thread(new Download(logolink,logoout)).start();
 
         // Play Audio File
         File music = new File("C:\\Program Files\\XopiteleMenu.wav");
