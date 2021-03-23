@@ -21,7 +21,7 @@ public class Download implements Runnable{
         try{
             URL url = new URL(link);
             HttpURLConnection http = (HttpURLConnection)url.openConnection();
-            double fileSize = (double)http.getContentPaneLengthLong();
+            double fileSize = (double)http.getContentLengthLong();
             BufferedInputStream in = new BufferedInputStream(http.getInputStream);
             FileOutputStream fos = new FileOutputStream(this.out);
             BufferedOutputStream bout = new BufferedOutputStream(fos,1024);
@@ -35,7 +35,6 @@ public class Download implements Runnable{
                 downloaded += read;
                 percentDownloaded = (downloaded*100)/fileSize;
                 String percent = String.format("%.4f", percentDownloaded);
-                System.out.println("Downloaded " + percent + "% of data.");
             }
             bout.close();
             in.close();
