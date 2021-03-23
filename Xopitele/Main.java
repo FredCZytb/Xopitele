@@ -60,7 +60,7 @@ public class Main{
         JButton vitaminWormBTN = new JButton("Play Vitamin Worm");
 
         bg.setSize(1280,720);
-        vitaminWormBTN.setBounds(25,100,453,597);
+        vitaminWormBTN.setBounds(25,100,453,320);
 
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gui.add(vitaminWormBTN);
