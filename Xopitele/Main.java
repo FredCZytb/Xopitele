@@ -27,8 +27,8 @@ public class Main{
         // Download Audio File
         String link = "https://github.com/RobumViren849/Xopitele/raw/main/Xopitele/menumusic.wav";
         File out = new File("C:\\Program Files\\XopiteleMenu.wav");
-        String logolink = "https://github.com/RobumViren849/Xopitele/raw/main/Xopitele/Image/logo.png";
-        File logoout = new File("C:\\Program Files\\XopiteleLogo.png");
+        String bglink = "https://github.com/RobumViren849/Xopitele/raw/main/Xopitele/Image/Background.png";
+        File bgout = new File("C:\\Program Files\\XopiteleBG.png");
 
         new Thread(new Download(link,out)).start();
         new Thread(new Download(logolink,logoout)).start();
@@ -46,11 +46,14 @@ public class Main{
         */////*
 
         JFrame gui = new JFrame("Xopitele - Running Application");
+        JLabel bg = new JLabel(new ImageIcon("C:\\Program Files\\XopiteleBG.png"));
+        bg.setSize(1280,720)
+
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gui.add(bg);
         gui.setVisible(true);
         gui.setSize(1280,720);
         gui.getContentPane().setBackground(new Color(22, 156, 204));
-        gui.setIconImage(new ImageIcon(logoout).getImage());
         System.out.println("GUI system running");
     }
 }
