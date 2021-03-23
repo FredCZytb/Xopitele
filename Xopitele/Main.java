@@ -1,6 +1,5 @@
 // Swing
-import javax.swing.JFrame;
-import javax.swing.ImageIcon;
+import javax.swing.*;
 
 // Awt Imports
 import java.awt.Color;
@@ -31,7 +30,7 @@ public class Main{
         File bgout = new File("C:\\Program Files\\XopiteleBG.png");
 
         new Thread(new Download(link,out)).start();
-        new Thread(new Download(logolink,logoout)).start();
+        new Thread(new Download(bglink,bgout)).start();
 
         // Play Audio File
         File music = new File("C:\\Program Files\\XopiteleMenu.wav");
