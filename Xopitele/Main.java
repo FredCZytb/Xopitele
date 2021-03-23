@@ -73,10 +73,4 @@ public class Main implements ActionListener{
         gui.getContentPane().setBackground(new Color(22, 156, 204));
         System.out.println("GUI system running");
     }
-
-    public void actionPerformed(ActionEvent e){
-        if(e.getSource() == button){
-            VitaminWorm VitaminWormGame = new VitaminWorm();
-        }
-    }
 }
