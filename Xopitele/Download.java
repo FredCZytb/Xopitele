@@ -22,7 +22,7 @@ public class Download implements Runnable{
             URL url = new URL(link);
             HttpURLConnection http = (HttpURLConnection)url.openConnection();
             double fileSize = (double)http.getContentLengthLong();
-            BufferedInputStream in = new BufferedInputStream(http.getInputStream);
+            BufferedInputStream in = new BufferedInputStream(http.getInputStream());
             FileOutputStream fos = new FileOutputStream(this.out);
             BufferedOutputStream bout = new BufferedOutputStream(fos,1024);
             byte[] buffer = new byte[1024];
