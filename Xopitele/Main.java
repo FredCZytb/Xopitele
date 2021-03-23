@@ -36,7 +36,7 @@ public class Main{
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);
         clip.start();
-        System.out.println("Audio system running");
+        System.out.println("Audio system is poggers");
 
         /*////*
         * GUI *
@@ -57,7 +57,8 @@ public class Main{
         // Render gui
         JFrame gui = new JFrame("Xopitele - Running Application");
         JLabel bg = new JLabel(new ImageIcon("C:\\Program Files\\XopiteleBG.png"));
-        JButton vitaminWormBTN = new JButton(new ImageIcon("C:\\Program Files\\XopiteleVitaminWorm.png"));
+        ImageIcon vwicon = new ImageIcon("C:\\Program Files\\XopiteleVitaminWorm.png");
+        JButton vitaminWormBTN = new JButton(vwicon);
 
         bg.setSize(1280,720);
         vitaminWormBTN.setBounds(25,100,453,734);
@@ -69,6 +70,6 @@ public class Main{
         gui.setResizable(false);
         gui.setSize(1280,720);
         gui.getContentPane().setBackground(new Color(22, 156, 204));
-        System.out.println("GUI system running");
+        System.out.println("GUI system pogging");
     }
 }
