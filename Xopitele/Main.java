@@ -18,7 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.zip.ZipInputStream;
 
-public class Main implements ActionListener{
+public class Main{
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException, Exception{
         /*//////*
         * AUDIO *
@@ -60,12 +60,11 @@ public class Main implements ActionListener{
         JLabel vwicon = new JLabel(new ImageIcon("C:\\Program Files\\XopiteleVitaminWorm.png"));
         JButton vitaminWormBTN = new JButton();
 
-        bg.setSize(1280,720)
+        bg.setSize(1280,720);
         vitaminWormBTN.setBounds(25,100,453,734);
-        vitaminWormBTN.addActionListener(this);
 
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gui.add(vitaminWormBTN)
+        gui.add(vitaminWormBTN);
         gui.add(bg);
         gui.setVisible(true);
         gui.setResizable(false);
