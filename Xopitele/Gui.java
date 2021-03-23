@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.zip.ZipInputStream;
 
 
-public class Gui{
+public class Gui implements ActionListener{
     public void render(){
         /*////*
         * GUI *

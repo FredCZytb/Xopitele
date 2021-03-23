@@ -18,7 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.zip.ZipInputStream;
 
-public class Main implements ActionListener{
+public class Main{
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException, Exception{
         /*//////*
         * AUDIO *
@@ -39,9 +39,5 @@ public class Main implements ActionListener{
         System.out.println("Audio system is poggers");
 
         Gui renderGui = new gui();
-    }
-
-    public void actionPerformed(ActionEvent e) { 
-        VitaminWorm game = new VitaminWorm();
     }
 }
