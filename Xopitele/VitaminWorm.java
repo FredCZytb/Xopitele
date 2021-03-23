@@ -1,4 +1,6 @@
+
 import javax.swing.*;
+import java.awt.color.*;
 
 public class VitaminWorm{
     public static void Renderer(){
@@ -8,7 +10,6 @@ public class VitaminWorm{
 
 
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gui.add(vitaminWormBTN)
         gui.add(warning);
         gui.setVisible(true);
         gui.setResizable(false);
