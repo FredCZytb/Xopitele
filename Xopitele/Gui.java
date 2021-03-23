@@ -52,4 +52,9 @@ public class Gui implements ActionListener{
         gui.getContentPane().setBackground(new Color(22, 156, 204));
         System.out.println("GUI system pogging");
     }
+
+    public void actionPerformed(ActionEvent e) { 
+        VitaminWorm game = new VitaminWorm();
+        game.Renderer();
+    }
 }

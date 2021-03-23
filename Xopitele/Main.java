@@ -39,5 +39,6 @@ public class Main{
         System.out.println("Audio system is poggers");
 
         Gui renderGui = new gui();
+        renderGui.render();
     }
 }
