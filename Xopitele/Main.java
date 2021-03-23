@@ -18,7 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.zip.ZipInputStream;
 
-public class Main{
+public class Main implements ActionListener{
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException, Exception{
         /*//////*
         * AUDIO *
@@ -60,7 +60,8 @@ public class Main{
         JButton vitaminWormBTN = new JButton("Play Vitamin Worm");
 
         bg.setSize(1280,720);
-        vitaminWormBTN.setBounds(25,100,453,320);
+        vitaminWormBTN.setBounds(25,210,453,320);
+        vitaminWormBTN.addActionListener();
 
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gui.add(vitaminWormBTN);
@@ -70,5 +71,9 @@ public class Main{
         gui.setSize(1280,720);
         gui.getContentPane().setBackground(new Color(22, 156, 204));
         System.out.println("GUI system pogging");
+    }
+
+    public void actionPerformed(ActionEvent e) { 
+        VitaminWorm game = new VitaminWorm();
     }
 }
