@@ -19,11 +19,6 @@ import java.net.URL;
 import java.util.zip.ZipInputStream;
 
 public class Main implements ActionListener{
-    JFrame gui = new JFrame("Xopitele - Running Application");
-    JLabel bg = new JLabel(new ImageIcon("C:\\Program Files\\XopiteleBG.png"));
-    JLabel vwicon = new JLabel(new ImageIcon("C:\\Program Files\\XopiteleVitaminWorm.png"));
-    JButton vitaminWormBTN = new JButton();
-
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException, Exception{
         /*//////*
         * AUDIO *
@@ -60,6 +55,11 @@ public class Main implements ActionListener{
         new Thread(new Download(bglink,bgout)).start();
 
         // Render gui
+        JFrame gui = new JFrame("Xopitele - Running Application");
+        JLabel bg = new JLabel(new ImageIcon("C:\\Program Files\\XopiteleBG.png"));
+        JLabel vwicon = new JLabel(new ImageIcon("C:\\Program Files\\XopiteleVitaminWorm.png"));
+        JButton vitaminWormBTN = new JButton();
+
         bg.setSize(1280,720)
         vitaminWormBTN.setBounds(25,100,453,734);
         vitaminWormBTN.addActionListener(this);
@@ -76,7 +76,6 @@ public class Main implements ActionListener{
 
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == button){
-            gui.dispose();
             VitaminWorm VitaminWormGame = new VitaminWorm();
         }
     }
