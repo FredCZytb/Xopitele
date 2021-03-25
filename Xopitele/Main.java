@@ -38,7 +38,7 @@ public class Main{
         clip.start();
         System.out.println("Audio system is poggers");
 
-        Gui renderGui = new gui();
+        Gui renderGui = new Gui();
         renderGui.render();
     }
 }

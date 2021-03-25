@@ -41,11 +41,12 @@ public class Gui implements ActionListener{
 
         bg.setSize(1280,720);
         vitaminWormBTN.setBounds(25,210,453,320);
-        vitaminWormBTN.addActionListener();
+        vitaminWormBTN.addActionListener(this);
 
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gui.add(vitaminWormBTN);
         gui.add(bg);
+        gui.setLocationRelativeTo(null);
         gui.setVisible(true);
         gui.setResizable(false);
         gui.setSize(1280,720);
